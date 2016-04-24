@@ -52,22 +52,35 @@ def details():
     return render_template('details.html')
 
 
-@app.route("/fetch_stats", methods=['POST'])
-def login():
+@app.route("/fetch_stats", methods=['GET'])
+def fetch_stats():
     '''
+    GET /fetch_stats
+    Returns percentages of hitting a health condition.
+
     Input should be:
-    {
         'age': 20,
         'sex': 'M',
-        'doctors': ['1235'],
-        'specialists': ['12345'],
-        'drugs': ['123']
-    }
     '''
-    data = request.form
+    data = request.args
     return json.dumps(risk.get_risk(
         data['age'],
         data['sex']))
+
+
+@app.route("/fetch_plan", methods=['GET'])
+def fetch_plan():
+    '''
+    GET /fetch_plan
+    Returns stats depicting how well a given plan will cover multiple health
+    conditions.
+
+    Input should be:
+        'age': 20,
+        'plan_id': '2938fawf' // StandardComponentId column in MySQL tables.
+    '''
+    return json.dumps(
+        risk.get_plan(request.args['plan_id'], request.args['age']))
 
 
 if __name__ == "__main__":

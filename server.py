@@ -10,6 +10,12 @@ app = Flask(__name__)
 def page_not_found(e):
     return render_template('404.html'), 404
 
+@app.route("/form_submission")
+def form_submission():
+    return '{"data": {"plans": [{"name": "Aetna HMO", "min": 1000, "max": 10000, "avg": 6000},{"name": "Blue Shield PPO", "min": 2000, "max": 15000, "avg": 4500}]}}'
+
+# Actual Routes
+
 @app.route("/")
 def root():
     return render_template('index.html')

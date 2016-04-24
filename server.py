@@ -26,6 +26,14 @@ def form1():
 def form2():
     return render_template('form2.html')
 
+@app.route("/plans.html")
+def plans():
+    return render_template('plans.html')
+
+@app.route("/details.html")
+def details():
+    return render_template('details.html')
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     # app.run(host='0.0.0.0', port=port)

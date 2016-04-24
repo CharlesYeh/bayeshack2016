@@ -8,6 +8,24 @@ body {
     padding: 0.5em;
 }
 
+.row {
+    align-items: center;
+}
+
+.vert-center {
+    align-content: center;
+}
+
+.left-aside {
+}
+
+.stuff {
+    justify-content: center;
+}
+
+.right-aside {
+}
+
 .header {
     font-family: "Fjord One";
     font-size: 3em;

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     {% block head %}
-    <title>Bayes Hack 2016 SuperApp{% block title %}{% endblock %}</title>
+    <title>Bayes Hack 2016 BYLT{% block title %}{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="keywords" content="">
@@ -11,9 +11,11 @@
 
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="static/css/base.css" rel="stylesheet">
+    <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Fjord+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
+    <!--<link href='https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/webcomponents-lite.min.js' rel='stylesheet'>-->
     <link rel="shortcut icon" href="{{ url_for('static', filename='ico/favicon.ico') }}">
     {% endblock %}
   </head>
@@ -21,7 +23,7 @@
     {% block navbar %}
     <div class="navbar navbar-static-top navbar-default">
       <div class="container">
-        <a class="navbar-brand" href="/">Health Insurance</a>
+        <a class="navbar-brand" href="/">BYLT - Health Insurance Comparisons</a>
       </div>
     </div>
     {% endblock %}
@@ -34,7 +36,7 @@
             <hr>
             {% block footer %}
             <footer class="footer">
-                <p>Bayes Hack 2016</p>
+                <p>Bayes Hack 2016 - Team BYLT</p>
             </footer>
         </div>
         {% endblock %}

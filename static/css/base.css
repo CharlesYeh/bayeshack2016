@@ -8,24 +8,9 @@ body {
     padding: 0.5em;
 }
 
-.container {
-}
-
 .row {
     display: flex;
     align-items: center;
-}
-
-.content {
-}
-
-.left-aside {
-}
-
-.stuff {
-}
-
-.right-aside {
 }
 
 .header {
@@ -38,11 +23,5 @@ body {
     font-family: "EB Garamond";
     font-size: 1em;
     position: fixed;
-}
-
-.prev-form-button {
-}
-
-.next-form-button {
 }
 

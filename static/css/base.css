@@ -1,11 +1,21 @@
 body {
-    font-family: "Open Sans";
-    font-size: 1.5em;
+    font-family: "Fjord One";
+    font-size: 2em;
 }
 
 .center {
     margin: auto;
     padding: 0.5em;
+}
+
+.question {
+    font-family: "Fjord One";
+    font-size: 2em;
+    font-weight: 100;
+}
+
+.label {
+    font-size: 1em;
 }
 
 .row {
@@ -15,7 +25,7 @@ body {
 
 .header {
     font-family: "Fjord One";
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .footer {

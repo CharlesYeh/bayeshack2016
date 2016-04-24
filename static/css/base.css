@@ -1,0 +1,28 @@
+body {
+    font-family: "Open Sans";
+    font-size: 1.5em;
+}
+
+.center {
+    margin: auto;
+    padding: 0.5em;
+}
+
+.header {
+    font-family: "Fjord One";
+    font-size: 3em;
+}
+
+.footer {
+    bottom: 0;
+    font-family: "EB Garamond";
+    font-size: 1em;
+    position: fixed;
+}
+
+.prev-form-button {
+}
+
+.next-form-button {
+}
+

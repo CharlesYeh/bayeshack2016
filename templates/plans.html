@@ -20,6 +20,7 @@
 
             {% raw %}
             {{#if plans.length}} <!-- show only when there are one or more items -->
+                gmin: {{gmin}}
                 <ul class="list-group plan-group">
                     {{#each plans:i}}
                     <li class="list-group-item plan-item">
@@ -45,7 +46,7 @@
                             <div class="col-md-2">
                             <p>{{name}}</p>
                             </div>
-                            <div class="col-md-2">[...]</div>
+                            <div class="col-md-2">[<i class="fa fa-ellipsis-h" aria-hidden="true"></i>]</div>
                         </div>
                     </li>
                     {{/each}}
@@ -55,12 +56,8 @@
         </script>
 
         <div class "col-md-2"></div>
-        <script>
-            var ractive = new Ractive({
-                el: '#plans',
-                template: '#plans-template',
-                data: {
-                    plans: [
+        <script type='text/javascript'>
+            var _plans = [
                     {
                         name: 'Aetna HMO',
                         min: 1000,
@@ -72,9 +69,16 @@
                         min: 2000,
                         max: 15000,
                         avg: 4500
-                    } ],
-                    gmin: _.min(this.plans, function(x) { return x.min; }).min,
-                    gmax: _.max(plans, function(x) { return x.max; }).max
+                    } ];
+            var _gmin = _.min(_plans, function(x) { return x.min; }).min;
+            var _gmax = _.max(_plans, function(x) { return x.max; }).max;
+            var ractive = new Ractive({
+                el: '#plans',
+                template: '#plans-template',
+                data: {
+                    plans: _plans,
+                    gmin: _gmin,
+                    gmax: _gmax
                 }
             });
         </script>

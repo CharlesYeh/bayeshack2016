@@ -8,19 +8,21 @@ body {
     padding: 0.5em;
 }
 
+.container {
+}
+
 .row {
+    display: flex;
     align-items: center;
 }
 
-.vert-center {
-    align-content: center;
+.content {
 }
 
 .left-aside {
 }
 
 .stuff {
-    justify-content: center;
 }
 
 .right-aside {

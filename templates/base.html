@@ -15,7 +15,6 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Fjord+One' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
-    <!--<link href='https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/webcomponents-lite.min.js' rel='stylesheet'>-->
     <link rel="shortcut icon" href="{{ url_for('static', filename='ico/favicon.ico') }}">
     {% endblock %}
   </head>
@@ -32,15 +31,15 @@
           {% block content %}
           {% endblock %}
         </div>
-        <div class="footer">
-            <hr>
-            {% block footer %}
-            <footer class="footer">
-                <p>Bayes Hack 2016 - Team BYLT</p>
-            </footer>
-        </div>
-        {% endblock %}
     </div>
+    {% block footer %}
+    <div class="footer center">
+        <hr>
+        <footer class="footer">
+            <p>Bayes Hack 2016 - Team BYLT</p>
+        </footer>
+    </div>
+    {% endblock %}
     {% block js_footer %}
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>

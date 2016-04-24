@@ -5,7 +5,56 @@
     <div class="col-md-1"><a href="form2.html"><i class="fa fa-chevron-left fa-5x"></i></a></div>
     <div class="col-md-10">
         <div class="header center">Plans</div>
-        <div class="plans"></div>
+
+        <div id=plans></div>
+
+        <script id='plans-template' type='text/ractive'>
+            {% raw %}
+            {{#if plans.length}} <!-- show only when there are one or more items -->
+                <ul class="list-group plan-group">
+                    {{#each plans:i}}
+                    <li class="list-group-item plan-item">
+                        <div class="row">
+                            <div class="col-md-6">
+                            <svg width="100%" height='60'>
+                                <line x1="30" y1="10" x2="{{min}}" y2="10" style="stroke:rgb(0,0,0);stroke-width:2"/>
+                            </svg>
+                            </div>
+                            <div class="col-md-6">
+                            <p>{{name}}</p>
+                            </div>
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            {{/if}}
+            {% endraw %}
+        </script>
+
+        <script>
+            var ractive = new Ractive({
+                el: '#plans',
+                template: '#plans-template',
+                data: {
+                    plans: [
+                    {
+                        name: 'Aetna HMO',
+                        min: 1000,
+                        max: 10000,
+                        avg: 6000
+                    },
+                    {
+                        name: 'Blue Shield PPO',
+                        min: 2000,
+                        max: 15000,
+                        avg: 4500
+                    } ],
+                    gmin: _.min(plans, function(x) { return x.min; }).min,
+                    gmax: _.max(plans, function(x) { return x.max; }).max
+                }
+            });
+        </script>
+
     </div>
     <div class="col-md-1"></i></div>
 </div>
